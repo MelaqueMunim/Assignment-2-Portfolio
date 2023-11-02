@@ -1,0 +1,31 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+<!--Main content-->
+<main>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Welcome to the <%= title %></h1>
+        </div>
+    </div>
+    <div id="project">
+        <div class="list">
+            <div class="project-list">
+                <div class="project-content-1">
+                    <img src="Assets/images/videos/FCFS.jpg" class="rounded float-left rounded mx-auto d-block">
+                    <h2>GUI Scheduler application Project</h2>
+                    <p class="font-weight-bold"><strong>In this project, the program provides a user-friendly interface for visualizing CPU scheduling algorithms. Users begin by launching the program, selecting an input file, and then choosing from a variety of scheduling algorithms, including Non-Preemptive Highest Priority First (HPF), First Come First Served (FCFS), Round Robin with a fixed time quantum (RR), and Preemptive Shortest Remaining Time Next (SRTN). By clicking the "Show/Update Graph" button, users can generate visual representations of these algorithms' schedules.</strong></p>
+                </div>
+                <div class="project-content-2">
+                    <img src="Assets/images/videos/Capture.jpg" class="rounded float-left rounded mx-auto d-block">
+                    <h2>Python Hang-Man Project</h2>
+                    <p class="font-weight-bold"><strong>In this project, I and a team Python hangman game lets players guess a secret word one letter at a time. It starts with a menu for playing or exiting. During the game, players input letters, which are checked for validity and repetition. The game updates the word display and tracks incorrect guesses. It ends when players win, lose due to too many mistakes, or exit. Afterward, the player gets the result, and the secret word is revealed.</strong></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>

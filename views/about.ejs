@@ -1,0 +1,46 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+<!--Main content-->
+<main>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Welcome to the <%= title %></h1>
+    </div>
+</div>
+<!--About me-->
+<div id="about">
+    <div class="list">
+        <div class="row">
+            <h3 class="display-4">About Me</h3>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="Assets/images/videos/Profile-pic.jpg" class="rounded float-left rounded mx-auto d-block">
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>I am a driven and dynamic undergraduate student with a strong background in communication and technology. My experience demonstrates my ability to create a welcoming and positive work environment. I am actively seeking part-time or casual job opportunities where I can leverage my existing skills and acquire new knowledge. I possess comprehensive knowledge in network and security IT, along with proficiency in programming languages such as Java and Python. Additionally, I excel in data entry and computer skills, including expertise in Windows, macOS, Microsoft Office Suite, Maestro, SMP, and Xray, with a typing speed of 60 words per minute. My excellent verbal and written communication skills enable me to build valuable relationships with colleagues and clients, delivering high-quality customer service through effective collaboration with teams. With exceptional time management, analytical, and organizational skills, I am committed to meeting company expectations and achieving goals while prioritizing secure product processing. I also pride myself on fostering a cohesive and welcoming work environment through exceptional teamwork, benefiting both colleagues and clients.</p>
+                    <footer class="blockquote-footer">Munim<cite title="Source Title"> Melaque</cite></footer>
+                  </blockquote>
+                </div>
+              </div>
+            <div class="tab-title">
+                <!--When this p tag is clicked open the video-content-->
+                <h3 class="tab-links display-4" onclick="opentab('video-content')">Video</h3>
+            </div>
+            <div class="tab-contents" id="video-content">
+                <div class="text-center">
+                    <div class="video">
+                        <video class="rounded" controls autoplay src="Assets/images/videos/About me video.mp4"></video>
+                    </div>                  
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+<script src="/Scripts/app.js"></script>
+
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>

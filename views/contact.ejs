@@ -1,0 +1,52 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+<!--Main content-->
+<main>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Welcome to the <%= title %></h1>
+        </div>
+    </div>
+    <!--contact-->
+    <div id="contact">
+        <div class="list">
+            <div class="row">
+                <!--Creating the left side of the contact page-->
+                <div class="left-side">
+                    <h3>Want to get in contact? Please fill in the boxes</h3>
+                </div>
+                <!---Creating the right side of the contact page-->
+                <div class="right-side">
+                    <form>
+                        <!--Creating the text inputs and labels for the contact page-->
+                        <!--adding the required feature to make sure the input boxes are filled in before submitting-->
+                        <div class="input">
+                            <input id="Your name" required>
+                            <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+                        </div>
+                        
+                        <div class="input">
+                            <input type="email" id="Your email" required>
+                            <label for="email"><i class="fa-solid fa-inbox"></i> Your Email</label>
+                        </div>
+                        <div class="input">
+                            <textarea id="Message" row="10" required></textarea>
+                            <label for="name"><i class="fa-regular fa-message"></i> Message</label>
+                        </div>
+                        <div class="input">
+                            <input type="number" id="Your name" required>
+                            <label for="number"><i class="fa-solid fa-robot"></i>* What is 10+10</label>
+                        </div>
+                        <!--Creating button-->
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>

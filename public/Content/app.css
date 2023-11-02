@@ -1,0 +1,317 @@
+@charset "UTF-8";
+/* CSS Documment */
+/* The Body */
+
+/* Reset some default styles for the body */
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: black;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+  }
+
+  /*Creating the background cubes design*/
+.cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    border: solid 1px black;
+    width: 10px;
+    height: 10px;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 16s ease-in forwards infinite;
+  }
+  /*Postioning the cubes and adding delays*/
+  .cube:nth-child(2n) {
+    border-color: black;
+  }
+  .cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 30vh;
+  }
+  .cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 25vh;
+  }
+  .cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 80vh;
+  }
+  .cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  .cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+  
+  /*making the cubes rotate and then fade away*/
+  @keyframes cube {
+  from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+
+  .container h3{
+    margin-top: 150px;
+
+  }
+
+/*-----------------------about-------------------------*/
+
+#about{
+    padding: 60px 0;
+    color: black;
+
+}
+/*Universal list that will be used as a layout for the remainder of the pages*/
+.list{
+  padding: 10px 10%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*Positioning image*/
+.image-left {
+  flex-basis: 35%;
+}
+
+
+/*Designing the image */
+.card-header img {
+  border-radius: 30px !important;
+  
+}
+
+/*Positioning the p text*/
+.row p{
+  flex-basis: 60%;
+}
+
+/*Universal sub title. Will be used as a layout for all sub-titles on the website*/
+.sub-title{
+    color: black;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/*positioning the  margin of the title of the tab and its display*/
+.tab-title{
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+/*Position and design of the tab links*/
+.tab-links{
+  margin-right: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+}
+
+/*Creating a line under the tab-links text that is only 25% width*/
+.tab-links::after{
+  content: "";
+  width: 25%;
+  background: black;
+  position: absolute;
+  height: 4px;
+  transition: 0.5s;
+  left: 0;
+  bottom: -10px;
+}
+
+
+/*Making the line width 100% when the cursor is on it*/
+.tab-links:hover::after{
+width: 100%;
+}
+
+/*hiding the contents */
+.tab-contents{
+  display: none;
+}
+
+
+/*Making the video design*/
+.video {
+margin-top: 20px;
+margin-left: 100px;
+max-width: 75%;
+cursor: pointer;
+}
+
+.video video {
+position: center;
+width: 90%; 
+height: 80%; 
+border-radius: 30px;
+}
+
+
+/*----------------------project-------------*/
+#project{
+    padding: 60 px 0;
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 30px;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.project-l{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 30px;
+  margin-bottom: 60px;
+}
+/*Making the box border*/
+.project-list div{
+    font-weight: 300;
+    background: linear-gradient(rgba(0,0,0,0.1),black);
+    padding: 40px;
+    font-size: 13px;
+    border-radius: 10px;
+    transition: background  0.5s, transform 0.5s;
+    cursor: pointer;
+    margin: 30px;
+}
+
+
+/*Customizing the headers of the boxes*/
+.project-list div h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+/*When the cursor is on the mouse it will change backgrounds and move the boxes up*/
+.project-list div:hover{
+  transform: translateY(-12px);
+    background: grey;
+}
+
+
+/*-----------contact--------------*/
+
+/*designing left side of the contact page*/
+.left-side{
+    flex-basis: 50%;
+}
+/*Designing and postioning the h3 header on the left side*/
+.left-side h3{
+    margin-top: 20vh;
+    font-size: 40px;
+}
+
+/*designing the right side of the contact*/
+.right-side{
+    flex-basis: 50%;
+}
+
+.right-side form{
+    width: 100%;
+}
+
+.input {
+    margin-top: 20px;
+    position: relative;
+  }
+
+
+form input{
+    font-size: 14px;
+    background: white;
+    margin-bottom: 20px;
+    text-decoration: none;
+    padding: 15px;
+    border: 3px solid black;
+    outline: 0;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+}
+
+
+form textarea{
+    width: 100%;
+    background: white;
+    padding: 15px;
+    border: 3px solid black;
+    outline: 0;
+    color: black;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  label {
+    height: 100%;
+    position: absolute;
+    padding: 10px;
+    left: 0;
+    top: 0;
+    transition: 0.2s;
+    cursor: text;
+    
+  }
+/* Moving textarea and input label above boxes and staying there once someone enters text */
+textarea:focus~label,
+textarea:valid~label {
+  top: -40px;
+  font-size: 15px;
+}
+input:focus~label,
+input:valid~label {
+  top: -40px;
+  font-size: 15px;
+}
+
+/*-------------designing the button----------*/
+.btn{
+    display: block !important;
+    margin: 100px auto !important;
+    margin-top: 20px !important;
+    width: fit-content !important;
+    border-radius: 10px !important;
+    padding: 15px 50px !important;
+    cursor: pointer;
+    border: 2px solid black !important;
+    color: white !important;
+
+}
+
+
+
+
+
+
+
+
